@@ -1,6 +1,6 @@
 <div class="box-content">
 	<h2><i class="fa fa-pencil"></i> Editar Usuário</h2>
-	<h2><i class="fa fa-pencil"></i> Editar Usuário</h2>
+
 
 	<form method="post" enctype="multipart/form-data"> 
 
