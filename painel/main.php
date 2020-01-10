@@ -51,7 +51,7 @@
 				<a <?php selecionadoMenu('listar-slides'); ?> href="">Listar Slides</a>
 				<h2><i class="fa fa-lock" aria-hidden="true"></i> Administração do Painel</h2>
 				<a <?php selecionadoMenu('editar-usuario'); ?> href="<?php echo INCLUDE_PATH_PAINEL?>editar-usuario">Editar Usuário</a>
-				<a <?php selecionadoMenu('adicionar-usuario'); ?> <?php verificaPermissaoMenu(2); ?> href="">Adicionar Usuários</a>
+				<a <?php selecionadoMenu('adicionar-usuario'); ?> <?php verificaPermissaoMenu(2); ?> href="<?php echo INCLUDE_PATH_PAINEL?>adicionar-usuario">Adicionar Usuários</a>
 				<h2><i class="fa fa-cogs" aria-hidden="true"></i> Configuração Geral</h2>
 				<a <?php selecionadoMenu('editar-site'); ?>  href="">Editar Site</a>
 			</div><!--itens-menu -->
