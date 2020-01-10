@@ -40,19 +40,20 @@
 				
 			</div><!--box-usuario -->
 			<div class="itens-menu">
+				<i class="fa fa-fighter-jet" aria-hidden="true"></i>
 				<h2><i class="fa fa-file-text-o" aria-hidden="true"></i> Cadastrar</h2>
-				<a href="<?php echo INCLUDE_PATH_PAINEL?>cadastrar-depoimento">Cadastrar Depoimentos</a>
-				<a href="">Cadastrar Serviços</a>
-				<a href="">Cadastrar Slides</a>
+				<a <?php selecionadoMenu('cadastrar-depoimento'); ?> href="<?php echo INCLUDE_PATH_PAINEL?>cadastrar-depoimento">Cadastrar Depoimentos</a>
+				<a <?php selecionadoMenu('cadastrar-servicos'); ?> href="">Cadastrar Serviços</a>
+				<a <?php selecionadoMenu('cadastrar-slides'); ?> href="">Cadastrar Slides</a>
 				<h2><i class="fa fa-briefcase" aria-hidden="true"></i> Gestão</h2>
-				<a href="">Listar Depoimentos</a>
-				<a href="">Lista Serviços</a>
-				<a href="">Listar Slides</a>
+				<a <?php selecionadoMenu('listar-depoimentos'); ?> href="">Listar Depoimentos</a>
+				<a <?php selecionadoMenu('listar-servicos'); ?> href="">Lista Serviços</a>
+				<a <?php selecionadoMenu('listar-slides'); ?> href="">Listar Slides</a>
 				<h2><i class="fa fa-lock" aria-hidden="true"></i> Administração do Painel</h2>
-				<a href="<?php echo INCLUDE_PATH_PAINEL?>editar-usuario">Editar Usuário</a>
-				<a href="">Adicionar Usuários</a>
+				<a <?php selecionadoMenu('editar-usuario'); ?> href="<?php echo INCLUDE_PATH_PAINEL?>editar-usuario">Editar Usuário</a>
+				<a <?php selecionadoMenu('adicionar-usuario'); ?> <?php verificaPermissaoMenu(2); ?> href="">Adicionar Usuários</a>
 				<h2><i class="fa fa-cogs" aria-hidden="true"></i> Configuração Geral</h2>
-				<a href="">Editar</a>
+				<a <?php selecionadoMenu('editar-site'); ?>  href="">Editar Site</a>
 			</div><!--itens-menu -->
 		</div><!--menu-wraper -->
 	</div><!--menu -->
