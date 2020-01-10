@@ -9,7 +9,7 @@
 	};
 	spl_autoload_register($autoload);
 	
-	define('INCLUDE_PATH','http://192.168.51.103/projeto02/');
+	define('INCLUDE_PATH','http://192.168.51.109/projeto02/');
 	define('INCLUDE_PATH_PAINEL',INCLUDE_PATH.'painel/');
 	define('BASE_DIR_PAINEL',__DIR__.'/painel');
 	//conectar com banco de dados.
@@ -20,7 +20,7 @@
 
 	define('NOME_EMPRESA','BS TECNOLOGY');
 
-	//function
+	//funções do painel
 
 	function pegarCargo($cargo){
 		$arr=[
@@ -32,4 +32,30 @@
 		
 	}
 
+	function selecionadoMenu($par){
+		$url = explode('/',@$_GET['url']) [0];
+		if ($url == $par) {
+			echo 'class = "menu-active"';
+		}
+
+	}
+	function verificaPermissaoMenu($permissao){
+		if ($_SESSION['cargo'] >= $permissao) {
+			return ;
+			# code...
+		}else{
+			echo 'style="display:none;"';
+		}
+	}
+
+
+	function verificaPermissaoPagina($permissao){
+			if ($_SESSION['cargo'] >= $permissao) {
+				return ;
+				# code...
+			}else{
+				include('painel/pages/permissao_negada.php');
+				die();
+			}
+		}
 ?>
