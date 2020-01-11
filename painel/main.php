@@ -40,7 +40,7 @@
 				
 			</div><!--box-usuario -->
 			<div class="itens-menu">
-				<i class="fa fa-fighter-jet" aria-hidden="true"></i>
+			
 				<h2><i class="fa fa-file-text-o" aria-hidden="true"></i> Cadastrar</h2>
 				<a <?php selecionadoMenu('cadastrar-depoimento'); ?> href="<?php echo INCLUDE_PATH_PAINEL?>cadastrar-depoimento">Cadastrar Depoimentos</a>
 				<a <?php selecionadoMenu('cadastrar-servicos'); ?> href="">Cadastrar Serviços</a>
