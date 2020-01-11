@@ -21,7 +21,7 @@
 
 	define('NOME_EMPRESA','BS TECNOLOGY');
 
-	//variaveis cargo apinel
+	
 
 
 

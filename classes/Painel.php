@@ -4,6 +4,9 @@
 	 */ 
 	class Painel
 	{
+		public static function userExists($login){
+
+		}
 		public static $cargos=[ //variavel global cargos.
 		'0' => 'Normal',
 		'1' => 'Sub Administrador',
