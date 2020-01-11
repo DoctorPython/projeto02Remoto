@@ -4,6 +4,11 @@
 	 */ 
 	class Painel
 	{
+		public static $cargos=[ //variavel global cargos.
+		'0' => 'Normal',
+		'1' => 'Sub Administrador',
+		'2' => 'Administrador'];
+
 		public static function logado(){
 			return isset($_SESSION['login']) ? true : false;
 		}
