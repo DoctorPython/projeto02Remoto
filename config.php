@@ -1,4 +1,5 @@
 <?php
+/* TODO: Variavel global com cargo*/
 	session_start();
 	date_default_timezone_set('America/Sao_Paulo');
 	$autoload = function($class){
@@ -20,15 +21,16 @@
 
 	define('NOME_EMPRESA','BS TECNOLOGY');
 
+	//variaveis cargo apinel
+
+
+
 	//funções do painel
 
-	function pegarCargo($cargo){
-		$arr=[
-			'0' => 'Normal',
-			'1' => 'Sub Administrador',
-			'2' => 'Administrador'];
+	function pegarCargo($indice){
+		
 
-			return $arr[$cargo]; 
+		return Painel::$cargos[$indice]; 
 		
 	}
 
