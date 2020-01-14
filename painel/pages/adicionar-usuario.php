@@ -32,11 +32,13 @@
 						Painel::alert('erro','Você precisa escolher um cargo abaixo do seu');
 					}else if (Painel::imagemValida($imagem) == false) {
 						Painel::alert('erro','O formato da imagem é invalido ou maior que 300mb');
-					}else if (Painel::userExists($login)) {
+					}else if (Usuario::userExists($login)) {
 						Painel::alert('erro','O Login ja exite escolha outro !');
 					}else{
 						//apenas cadastrar no banco.
 						$usuario = new Usuario();
+						$imagem = Painel::uploadFile($imagem);
+						$usuario->cadastrarUsuario($login,$senha,$imagem,$nome,$cargo);
 						Painel::alert('sucesso','O cadastro do usuário '.$login.' foi realizado com sucesso!');
 		
 					}
