@@ -163,7 +163,7 @@ header{
 }
 .w50{
 	width: 49%;
-	background: red !important;
+	background: people !important;
 	
 }
 .left{
@@ -241,13 +241,28 @@ header{
 	border: 5px solid white;
 }
 
-.box-metricas .box-metrica-single:nth-of-type(2){
+.box-metricas .box-metrica-single1:nth-of-type(2){
 	background: #E05C4E;
 }
 
-.box-metricas .box-metrica-single:nth-of-type(3){
+.box-metricas .box-metrica-single1:nth-of-type(3){
 	background: #0091ea;
 }
+.box-metricas .box-metrica-single2:nth-of-type(2){
+	background: #E05C4E;
+}
+
+.box-metricas .box-metrica-single2:nth-of-type(3){
+	background: #0091ea;
+}
+.box-metricas .box-metrica-single3:nth-of-type(2){
+	background: #E05C4E;
+}
+
+.box-metricas .box-metrica-single3:nth-of-type(3){
+	background: #0091ea;
+}
+
 
 .box-metrica-wraper{
 	padding: 10px 20px;
@@ -376,11 +391,26 @@ header{
 .menu-active::before{
 	content: '> ';
 }
+@media screen and (max-width: 1024px){
+	.box-metrica-single1{
+		width: 100%;
+	}
+}
+@media screen and (max-width: 1024px){
+	.box-metrica-single2{
+		width: 100%;
+	}
+}
+@media screen and (max-width: 1024px){
+	.box-metrica-single3{
+		width: 100%;
+	}
+}
 @media screen and (max-width: 768px){
-	.menu{
+	/*.menu{
 		display: none;
 		
-	}
+	}*/
 	.content{
 		width: 100%;
 		left: 0;
@@ -390,9 +420,30 @@ header{
 		width: 100%;
 	}
 }
+@media screen and (max-width: 500px){
+	.w50{
+		width: 100%;
+	}
+	.box-single-metrica{
+		width: 100%;
+		padding-top: 40%;
+	}
+}
 @media screen and (max-width: 400px){
+	.box-metrica-wraper h2{
+		font-size: 24px;
+	}
+	.box-metrica-wraper p{
+		padding: 10px 0;
+		font-size: 22px;
+	}
 	.menu-wraper{
 		width: 200px;
+	}
+}
+@media screen and(max-width: 380px){
+	.itens-menu a{
+		font-size: 15px;
 	}
 }
 
