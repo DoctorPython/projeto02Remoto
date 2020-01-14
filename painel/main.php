@@ -63,7 +63,8 @@
 				<i class="fa fa-bars"></i>
 			</div><!--menu-btn-->
 			<div class="loggout">
-					<a href="<?php echo INCLUDE_PATH_PAINEL?>"><i class="fa fa-home" aria-hidden="true"></i> <span>Pagina Inicial</span> </a>
+				<a <?php if (@$_GET['url'] == '') { ?> style="background: #60727a; padding: 15px;" <?php } ?> href="<?php echo INCLUDE_PATH_PAINEL?>">
+				<i class="fa fa-home" aria-hidden="true"></i> <span>Pagina Inicial</span> </a>
 				<a href="<?php echo INCLUDE_PATH_PAINEL?>?loggout"><i class="fa fa-power-off" aria-hidden="true"></i> <span>Sair</span> </a>
 			</div><!--loggout -->
 			<div class="clear"></div><!--clear -->
