@@ -39,7 +39,7 @@
 		</div><!--box-content-->
 
 		
-		<div class="box-content left w100">
+		<div class="box-content   left w100">
 			<h2><i class="fa fa-eye" aria-hidden="true"></i> Usuários Online</h2>
 			<div class="table-responsive">
 				<div class="row">
@@ -71,6 +71,43 @@
 			</div><!--table-responsive-->
 			
 		</div>
+
+		<div class="box-content   left w100">
+			<h2><i class="fa fa-eye" aria-hidden="true"></i> Usuários Painel</h2>
+			<div class="table-responsive">
+				<div class="row">
+					<div class="col">
+						<span><i class="fa fa-id-card-o" aria-hidden="true"></i> Nome</span>
+					</div><!--col-->
+					<div class="col">
+						<span><i class="fa fa-level-up" aria-hidden="true"></i> Cargo</span>
+					</div><!--col-->
+					<div class="clear"></div>
+				</div><!--row-->
+				<?php
+					$usuariosPainel = Mysql::conectar()->prepare("SELECT * FROM `tb.admin_usuarios`");
+					$usuariosPainel->execute();
+					$usuariosPainel = $usuariosPainel->fetchall();
+					foreach ($usuariosPainel as $key => $value) {
+			
+					
+					 	
+					 
+				?>
+				<div class="row">
+					<div class="col">
+						<span><?php echo $value['user']; ?></span>
+					</div><!--col-->
+					<div class="col">
+						<span><?php echo pegarCargo($value['cargo']) ?></span>
+					</div><!--col-->
+					<div class="clear"></div>
+				</div><!--row-->
+				<?php } ?><!--fim foreach-->
+			</div><!--table-responsive-->
+			
+		</div>
+		<div class="clear"></div>
 		<!--
 		<div class="box-content left w50">
 			
